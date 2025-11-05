@@ -1,0 +1,14 @@
+input {
+    padding: 5px;
+    width: 250px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  
+  div {
+    margin-top: 10px;
+  }
+  

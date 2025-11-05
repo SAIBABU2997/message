@@ -1,0 +1,27 @@
+<div style="width: 400px; margin: 20px auto; font-family: Arial, sans-serif;">
+  <h2>Message Board</h2>
+
+  <!-- Input Form -->
+  <form (ngSubmit)="send()">
+    <input
+      type="text"
+      [(ngModel)]="msg"
+      name="msg"
+      placeholder="Type your message..."
+      style="width: 70%; padding: 5px;"
+      required
+    />
+    <button type="submit" style="padding: 5px 10px;">Send</button>
+  </form>
+
+  <hr />
+
+  <!-- Message List -->
+  <div *ngFor="let m of list" style="margin-bottom: 8px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+    {{ m.text }}
+  </div>
+</div>
+<div *ngFor="let m of list" style="margin-bottom: 8px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+  {{ m.text }}
+  <button (click)="delete(m._id)" style="float:right;">Delete</button>
+</div>
